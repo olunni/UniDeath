@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     compileOnly(libs.paper.api)
+    implementation(libs.minimessage)
 }
 
 kotlin {
@@ -21,4 +22,5 @@ kotlin {
 
 tasks.shadowJar {
     archiveClassifier.set("")
+    relocate("net.kyori.adventure.text.minimessage", "dev.oluni.kyori.minimessage")
 }

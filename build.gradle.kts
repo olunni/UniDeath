@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.shadow)
 }
 
 group = "dev.oluni"
@@ -16,4 +17,8 @@ dependencies {
 
 kotlin {
     jvmToolchain(11)
+}
+
+tasks.shadowJar {
+    archiveClassifier.set("")
 }

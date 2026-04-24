@@ -1,0 +1,6 @@
+name: UniDeath
+version: 1.0.0
+main: dev.oluni.unideath.UniDeath
+description: A simple Minecraft plugin with death settings.
+author: olunni
+website: https://github.com/olunni/UniDeath

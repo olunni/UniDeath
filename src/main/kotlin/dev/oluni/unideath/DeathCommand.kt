@@ -1,14 +1,11 @@
 package dev.oluni.unideath
 
-import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
 
 class DeathCommand(val config: ConfigManager) : CommandExecutor, TabCompleter {
-
-    val mm = MiniMessage.miniMessage()
 
     override fun onCommand(
         sender: CommandSender,
@@ -17,15 +14,15 @@ class DeathCommand(val config: ConfigManager) : CommandExecutor, TabCompleter {
         args: Array<out String>?)
     : Boolean {
         if (args.isNullOrEmpty()) {
-            sender.sendMessage(mm.deserialize(config.usageMessage))
+            sender.sendColoredMessage(config.usageMessage)
             return true
         }
         if (args[0].equals("reload", true)) {
             if (sender.hasPermission("unideath.reload")) {
                 config.reloadConfig()
-                sender.sendMessage(mm.deserialize(config.reloadSuccessfulMessage))
+                sender.sendColoredMessage(config.reloadSuccessfulMessage)
             } else {
-                sender.sendMessage(mm.deserialize(config.noPermissionMessage))
+                sender.sendColoredMessage(config.noPermissionMessage)
                 return true
             }
         }

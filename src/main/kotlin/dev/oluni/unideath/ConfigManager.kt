@@ -8,11 +8,11 @@ class ConfigManager(val plugin: UniDeath) {
         get() = config.getBoolean("instant-respawn", true)
 
     val usageMessage: String
-        get() = config.getString("messages.usage") ?: "<gradient:#FFA7D9:#FFA7D9>UniDeath</gradient> <gray>-> <red>Usage: /unideath reload"
+        get() = config.getString("messages.usage") ?: "&#FFA7D9UniDeath &7-> &cUsage: /unideath reload"
     val reloadSuccessfulMessage: String
-        get() = config.getString("messages.successful-reload") ?: "<gradient:#FFA7D9:#FFA7D9>UniDeath</gradient> <gray>-> <green>Config reload successful!</green>"
+        get() = config.getString("messages.successful-reload") ?: "&#FFA7D9UniDeath &7-> &aConfig reload successful!"
     val noPermissionMessage: String
-        get() = config.getString("messages.successful-reload") ?: "<gradient:#FFA7D9:#FFA7D9>UniDeath</gradient> <gray>-> <red>You don't have permission to do this!"
+        get() = config.getString("messages.no-permission") ?: "&#FFA7D9UniDeath &7-> &cYou don't have permission to do this!"
 
     fun reloadConfig() {
         plugin.reloadConfig()

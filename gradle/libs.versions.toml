@@ -3,6 +3,7 @@ kotlin = "2.3.0"
 paper-api = "1.16.5-R0.1-SNAPSHOT"
 shadow = "9.0.0"
 minimessage = "4.13.1"
+adventure = "4.17.0"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -11,3 +12,4 @@ shadow = { id = "com.gradleup.shadow", version.ref = "shadow"}
 [libraries]
 paper-api = { module = "com.destroystokyo.paper:paper-api", version.ref = "paper-api" }
 minimessage = { module = "net.kyori:adventure-text-minimessage", version.ref = "minimessage" }
+adventure = { module = "net.kyori:adventure-api", version.ref = "adventure" }

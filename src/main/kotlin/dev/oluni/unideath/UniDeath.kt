@@ -8,7 +8,10 @@ class UniDeath : JavaPlugin() {
         saveDefaultConfig()
         logger.info("UniDeath enabled.")
         val configManager = ConfigManager(this)
+        val deathCommand = DeathCommand(configManager)
         server.pluginManager.registerEvents(DeathListener(this, configManager), this)
+        getCommand("unideath")?.setExecutor(deathCommand)
+        getCommand("unideath")?.tabCompleter = deathCommand
     }
 
     override fun onDisable() {

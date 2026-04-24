@@ -4,3 +4,9 @@ main: dev.oluni.unideath.UniDeath
 description: A simple Minecraft plugin with death settings.
 author: olunni
 website: https://github.com/olunni/UniDeath
+commands:
+  unideath:
+
+permissions:
+  unideath.reload:
+    default: op

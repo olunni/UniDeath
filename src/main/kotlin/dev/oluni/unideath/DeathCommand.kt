@@ -14,15 +14,15 @@ class DeathCommand(val config: ConfigManager) : CommandExecutor, TabCompleter {
         args: Array<out String>?)
     : Boolean {
         if (args.isNullOrEmpty()) {
-            sender.sendColoredMessage(config.usageMessage)
+            sender.sendMessage(config.usageMessage.colorize())
             return true
         }
         if (args[0].equals("reload", true)) {
             if (sender.hasPermission("unideath.reload")) {
                 config.reloadConfig()
-                sender.sendColoredMessage(config.reloadSuccessfulMessage)
+                sender.sendMessage(config.reloadSuccessfulMessage.colorize())
             } else {
-                sender.sendColoredMessage(config.noPermissionMessage)
+                sender.sendMessage(config.noPermissionMessage.colorize())
                 return true
             }
         }

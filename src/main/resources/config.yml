@@ -1,4 +1,31 @@
 instant-respawn: true
+keep-level: false
+disable-death-message: false
+title:
+  title: "&aRespawn!"
+  subtitle: ""
+  fadeIn: 10
+  stay: 70
+  fadeOut: 20
+gamemode-after-respawn: "Survival"
+actionbar: ""
+chat:
+  - "%player%, you died!"
+sound:
+  enabled: false
+  type: "ENTITY_PLAYER_LEVELUP"
+  volume: 1.0
+  pitch: 1.0
+effect:
+  test:
+    type: "SPEED"
+    duration: 10
+    level: 2
+commands:
+  enabled: false
+  list:
+    - "give %player% diamond 10"
+    - "give %player% stone 20"
 
 messages:
   usage: "&#FFA7D9UniDeath &7-> &cUsage: /unideath reload"

@@ -1,7 +1,6 @@
 package dev.oluni.unideath
 
 import net.md_5.bungee.api.ChatColor
-import org.bukkit.command.CommandSender
 
 fun String.colorize(): String {
     val pattern = Regex("&#([a-fA-F0-9]{6})")
